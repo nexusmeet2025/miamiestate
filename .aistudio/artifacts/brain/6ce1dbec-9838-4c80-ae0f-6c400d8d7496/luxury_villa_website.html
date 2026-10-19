@@ -1,0 +1,2524 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Social Sharing -->
+    <title>[villa name] | Luxury Private Villa in [city, area]</title>
+    <meta
+      name="description"
+      content="[villa name] - A prestigious [e.g. 5-bedroom private villa with pool] in [city, area]. Private pool, expansive landscaped grounds, bespoke entertainment, and refined architectural living."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="[villa name] | Luxury Private Villa in [city, area]" />
+    <meta
+      property="og:description"
+      content="[Tagline idea: Where luxury feels like home] - Experience bespoke architectural luxury, private pool, and refined living in [city, area]."
+    />
+    <meta property="og:image" content="images/hero.jpg" />
+
+    <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Inter (Clean Sans Body), Pinyon Script (Luxury Script Accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Standalone CSS Design System & Theme Styling -->
+    <style>
+      /* Design Tokens (Easily Customizable) */
+      :root {
+        --color-deep-green: #0F2A24;
+        --color-deep-green-dark: #091A16;
+        --color-deep-green-card: #15372F;
+        --color-deep-green-hover: #1A443B;
+        --color-cream: #F4EEE6;
+        --color-cream-light: #FAF7F2;
+        --color-cream-dark: #E6DED3;
+        --color-gold: #B89B5E;
+        --color-gold-light: #D4BE8A;
+        --color-gold-dark: #92773C;
+        --font-serif: "Cormorant Garamond", Georgia, serif;
+        --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --font-script: "Pinyon Script", cursive;
+      }
+
+      /* CSS Reset */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--color-deep-green);
+        color: var(--color-cream);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        background-color: var(--color-deep-green);
+        line-height: 1.6;
+      }
+
+      ::selection {
+        background-color: var(--color-gold);
+        color: var(--color-deep-green);
+      }
+
+      /* Typography Helpers */
+      .font-serif { font-family: var(--font-serif); }
+      .font-sans { font-family: var(--font-body); }
+      .font-script {
+        font-family: var(--font-script);
+        font-style: normal;
+        letter-spacing: 0.02em;
+      }
+
+      /* Responsive Containers */
+      .container-max {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .container-max {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container-max {
+          padding-left: 3.5rem;
+          padding-right: 3.5rem;
+        }
+      }
+
+      /* Generous Section Padding (at least 96px on desktop) */
+      .section-pad {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+      @media (min-width: 1024px) {
+        .section-pad {
+          padding-top: 7.5rem;
+          padding-bottom: 7.5rem;
+        }
+      }
+
+      /* Thin 1px Gold Line Dividers & Borders */
+      .gold-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(184, 155, 94, 0.4) 20%, rgba(184, 155, 94, 0.4) 80%, transparent);
+      }
+      .gold-border {
+        border: 1px solid rgba(184, 155, 94, 0.22);
+      }
+      .gold-border-subtle {
+        border: 1px solid rgba(184, 155, 94, 0.14);
+      }
+
+      /* Luxury Gold Button */
+      .btn-gold {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: var(--color-gold);
+        color: var(--color-deep-green);
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        padding: 0.875rem 1.875rem;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 4px 18px rgba(184, 155, 94, 0.25);
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+      }
+      .btn-gold:hover {
+        background-color: var(--color-gold-light);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(184, 155, 94, 0.38);
+      }
+
+      /* Outline Gold Button */
+      .btn-outline-gold {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: transparent;
+        color: var(--color-cream);
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        padding: 0.8125rem 1.875rem;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 1px solid rgba(184, 155, 94, 0.55);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .btn-outline-gold:hover {
+        border-color: var(--color-gold);
+        color: var(--color-gold);
+        background-color: rgba(184, 155, 94, 0.08);
+        transform: translateY(-2px);
+      }
+
+      /* Soft Luxury Shadows */
+      .shadow-luxury {
+        box-shadow: 0 24px 50px -15px rgba(5, 14, 12, 0.7);
+      }
+      .shadow-luxury-cream {
+        box-shadow: 0 20px 45px -15px rgba(15, 42, 36, 0.12);
+      }
+
+      /* Scroll Reveal Animations (0.6s) */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Sticky Topbar Behavior */
+      #topbar.scrolled {
+        background-color: rgba(15, 42, 36, 0.96);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 10px 30px rgba(5, 14, 12, 0.45);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(184, 155, 94, 0.18);
+      }
+      .nav-link.active {
+        color: var(--color-gold) !important;
+      }
+      .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: var(--color-gold);
+      }
+
+      /* Gallery Filter Tab Active State */
+      .gallery-tab.active {
+        background-color: var(--color-gold);
+        color: var(--color-deep-green);
+        border-color: var(--color-gold);
+      }
+
+      /* Floor Plan Tab Active State */
+      .floor-tab.active {
+        background-color: var(--color-gold);
+        color: var(--color-deep-green);
+        border-color: var(--color-gold);
+      }
+
+      /* Pricing Tab Active State */
+      .pricing-tab.active {
+        background-color: var(--color-gold);
+        color: var(--color-deep-green);
+        border-color: var(--color-gold);
+      }
+
+      /* Mobile Drawer */
+      #mobile-menu.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      /* Modals (Lightbox & Video Player) */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background-color: rgba(7, 18, 15, 0.96);
+        backdrop-filter: blur(8px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+      .modal-backdrop.active {
+        display: flex;
+      }
+
+      /* Testimonials Slider Animation */
+      .testi-slide {
+        display: none;
+        animation: fadeIn 0.45s ease-in-out;
+      }
+      .testi-slide.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===================================================================
+         STICKY MENU BAR
+         Slim and transparent at top, solid dark green with subtle blur on scroll
+         Left: Villa logo (wordmark with a small line-art icon)
+         Links in order:
+         Home | About | Gallery | Amenities | Floor Plans | Location | Experiences | Pricing | Testimonials | FAQ | Contact
+         Right: Gold "Book a Visit" button + phone or WhatsApp icon
+         Mobile: Hamburger with full-screen overlay menu
+         =================================================================== -->
+    <header
+      id="topbar"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 px-6 sm:px-10 flex items-center justify-between"
+      style="border-bottom: 1px solid rgba(184, 155, 94, 0.1);"
+    >
+      <!-- Left: Villa Wordmark & Architectural Monoline Icon -->
+      <a href="#home" class="flex items-center gap-3 text-decoration-none group" style="text-decoration: none;">
+        <span
+          class="w-8 h-8 rounded border border-[#B89B5E]/50 flex items-center justify-center text-[#B89B5E] transition-colors group-hover:border-[#B89B5E]"
+          style="background: rgba(184, 155, 94, 0.08);"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+            <path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6a3 3 0 0 1 6 0v6" />
+            <path d="M12 3v3" />
+          </svg>
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl tracking-[0.16em] uppercase font-light text-[#F4EEE6] group-hover:text-[#B89B5E] transition-colors">
+            [villa name]
+          </span>
+          <span class="text-[9px] tracking-[0.28em] uppercase text-[#B89B5E] font-sans -mt-1 font-medium">
+            [city, area]
+          </span>
+        </div>
+      </a>
+
+      <!-- Middle/Right: Navigation Links (Exact order requested) -->
+      <nav class="hidden xl:flex items-center gap-5 2xl:gap-7 text-xs uppercase tracking-[0.16em] font-medium text-[#F4EEE6]/80">
+        <a href="#home" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Home</a>
+        <a href="#about" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">About</a>
+        <a href="#gallery" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Gallery</a>
+        <a href="#amenities" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Amenities</a>
+        <a href="#floorplans" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Floor Plans</a>
+        <a href="#location" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Location</a>
+        <a href="#experiences" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Experiences</a>
+        <a href="#pricing" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Pricing</a>
+        <a href="#testimonials" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Testimonials</a>
+        <a href="#faq" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">FAQ</a>
+        <a href="#contact" class="nav-link relative hover:text-[#B89B5E] transition-colors py-1">Contact</a>
+      </nav>
+
+      <!-- Right: Book a Visit button + WhatsApp/Phone Quick Affordance -->
+      <div class="flex items-center gap-3">
+        <!-- Phone / WhatsApp Icon Action -->
+        <a
+          href="https://wa.me/[WhatsApp]?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20[villa%20name]."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden sm:flex w-9 h-9 rounded-full border border-[#B89B5E]/40 items-center justify-center text-[#B89B5E] hover:border-[#B89B5E] hover:bg-[#B89B5E]/10 transition-all"
+          aria-label="Direct WhatsApp Enquiry"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+        </a>
+
+        <!-- Gold "Book a Visit" Button -->
+        <a href="#contact" class="btn-gold hidden sm:inline-flex text-xs py-2.5 px-6">
+          Book a Visit
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button
+          id="menu-btn"
+          type="button"
+          class="xl:hidden p-2 text-[#F4EEE6] hover:text-[#B89B5E] transition-colors focus:outline-none"
+          aria-label="Toggle Navigation Menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE FULL-SCREEN OVERLAY MENU -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-40 bg-[#0F2A24]/98 backdrop-blur-xl flex flex-col justify-between p-8 sm:p-12 transition-all duration-400 opacity-0 pointer-events-none -translate-y-4"
+    >
+      <div class="flex justify-between items-center border-b border-[#B89B5E]/20 pb-5">
+        <div class="flex flex-col">
+          <span class="font-serif text-2xl tracking-[0.16em] uppercase text-[#F4EEE6]">[villa name]</span>
+          <span class="text-[10px] tracking-[0.24em] uppercase text-[#B89B5E]">[city, area]</span>
+        </div>
+        <button id="close-menu-btn" class="p-2 text-[#F4EEE6]/70 hover:text-[#F4EEE6]">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 text-base font-serif tracking-[0.14em] uppercase text-[#F4EEE6] py-4 overflow-y-auto max-h-[60vh]">
+        <a href="#home" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Home</a>
+        <a href="#about" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">About</a>
+        <a href="#gallery" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Gallery</a>
+        <a href="#amenities" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Amenities</a>
+        <a href="#floorplans" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Floor Plans</a>
+        <a href="#location" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Location</a>
+        <a href="#experiences" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Experiences</a>
+        <a href="#pricing" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Pricing</a>
+        <a href="#testimonials" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Testimonials</a>
+        <a href="#faq" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">FAQ</a>
+        <a href="#contact" class="mobile-nav-link hover:text-[#B89B5E] transition-colors">Contact</a>
+      </nav>
+
+      <div class="border-t border-[#B89B5E]/20 pt-5 flex flex-col gap-3">
+        <a href="#contact" class="btn-gold w-full text-center mobile-nav-link">
+          Book a Visit
+        </a>
+        <span class="text-center text-xs text-[#F4EEE6]/60 tracking-wider">
+          [Type: e.g. 5-bedroom private villa with pool] &bull; [city, area]
+        </span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 1: HERO
+         Full-screen photo or video of the villa with dark gradient overlay
+         Headline max 8 words with one accent word in gold script
+         One supporting line, two buttons ("Book a Visit", "View Gallery")
+         Small scroll indicator, quick-facts strip at bottom
+         =================================================================== -->
+    <section
+      id="home"
+      class="relative w-full min-h-screen flex flex-col justify-between items-center text-center overflow-hidden"
+      style="padding-top: 7.5rem; padding-bottom: 2.5rem;"
+    >
+      <!-- Background Photo with Dark Gradient Overlay -->
+      <!-- Hero Photo: images/hero.jpg -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <img
+          src="images/hero.jpg"
+          alt="[villa name] architectural exterior view at dusk"
+          class="w-full h-full object-cover object-center"
+          style="transform: scale(1.02); filter: brightness(0.85);"
+        />
+        <!-- Deep Green / Charcoal Gradient Overlay ensuring WCAG AA legibility -->
+        <div
+          class="absolute inset-0"
+          style="background: linear-gradient(180deg, rgba(15, 42, 36, 0.75) 0%, rgba(15, 42, 36, 0.45) 50%, rgba(15, 42, 36, 0.94) 100%);"
+        ></div>
+      </div>
+
+      <!-- Spacer top -->
+      <div class="relative z-10 w-full"></div>
+
+      <!-- Hero Main Text Block -->
+      <div class="relative z-10 container-max px-6 sm:px-10 flex flex-col items-center justify-center my-auto">
+        <!-- Thin Gold Kicker Details -->
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="w-8 h-[1px] bg-[#B89B5E]"></span>
+          <span class="text-xs uppercase tracking-[0.3em] text-[#B89B5E] font-medium font-sans">
+            [villa name] &bull; [city, area]
+          </span>
+          <span class="w-8 h-[1px] bg-[#B89B5E]"></span>
+        </div>
+
+        <!-- Headline: exactly 6 words (under 8 words limit) with accent word in gold script -->
+        <h1
+          class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#F4EEE6] leading-[1.08] tracking-[0.02em] max-w-4xl mx-auto drop-shadow-lg mb-6 reveal"
+          style="text-wrap: balance;"
+        >
+          Experience Unrivaled <span class="font-script text-[#B89B5E] lowercase text-5xl sm:text-7xl md:text-8xl">luxury</span> In Nature
+        </h1>
+
+        <!-- One Supporting Line -->
+        <p class="text-sm sm:text-base md:text-lg text-[#F4EEE6]/90 font-light max-w-2xl mx-auto leading-relaxed mb-10 reveal">
+          [Tagline idea: Where luxury feels like home] &bull; A masterfully designed [e.g. 5-bedroom private villa with pool] crafted for privacy, prestige, and seamless entertaining.
+        </p>
+
+        <!-- Two Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal">
+          <a href="#contact" class="btn-gold w-full sm:w-auto">
+            Book a Visit
+          </a>
+          <a href="#gallery" class="btn-outline-gold w-full sm:w-auto">
+            View Gallery
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="mt-8 flex flex-col items-center gap-2 reveal">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-[#B89B5E] font-mono">Scroll to explore</span>
+          <div class="w-5 h-9 rounded-full border border-[#B89B5E]/50 flex items-start justify-center p-1">
+            <span class="w-1 h-2 rounded-full bg-[#B89B5E] animate-bounce"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick-Facts Strip at Bottom (Bedrooms, Bathrooms, Area, Pool, Parking) -->
+      <div class="relative z-10 w-full max-w-5xl mx-auto px-4 mt-6 reveal">
+        <div
+          class="rounded-lg py-4 px-6 sm:px-8 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm tracking-[0.14em] uppercase text-[#F4EEE6]/90 font-medium gold-border"
+          style="background-color: rgba(15, 42, 36, 0.82); backdrop-filter: blur(16px);"
+        >
+          <span>[bedrooms] Bedrooms</span>
+          <span class="text-[#B89B5E]">&bull;</span>
+          <span>[bathrooms] Bathrooms</span>
+          <span class="text-[#B89B5E]">&bull;</span>
+          <span>[built-up area] Sq Ft</span>
+          <span class="text-[#B89B5E]">&bull;</span>
+          <span>Private Pool</span>
+          <span class="text-[#B89B5E]">&bull;</span>
+          <span>[parking] Parking</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: ABOUT / OVERVIEW
+         Large villa photo on left, dark green panel on right overlapping it with:
+         - Short description (60 words max)
+         - 4 animated stat counters (bedrooms, bathrooms, built-up area, plot size)
+         - "Learn More" button
+         Plus sticky/adjacent Desktop Quick-Facts Card
+         =================================================================== -->
+    <section id="about" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative overflow-hidden">
+      <div class="container-max">
+        <!-- Section Kicker with Script Accent -->
+        <div class="mb-12 text-center lg:text-left reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            The Residence
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Discover [villa name] &bull; <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">overview</span>
+          </h2>
+        </div>
+
+        <!-- Overlapping 2-Column Architectural Layout -->
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+          <!-- Left: Large Photo (images/about.jpg) -->
+          <!-- About Photo: images/about.jpg -->
+          <div class="lg:col-span-7 relative z-10 reveal">
+            <div class="rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] bg-[#0F2A24]">
+              <img
+                src="images/about.jpg"
+                alt="[villa name] architectural facade and private swimming pool"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+            <!-- Minimalist subcaption -->
+            <div class="mt-3 flex items-center justify-between text-xs text-[#0F2A24]/60 font-sans tracking-wider">
+              <span>LOCATION: [city, area]</span>
+              <span>PURPOSE: [for sale / for rent and stay / both]</span>
+            </div>
+          </div>
+
+          <!-- Right: Dark Green Panel Overlapping Photo -->
+          <div class="lg:col-span-6 lg:-ml-16 relative z-20 reveal">
+            <div
+              class="rounded-lg p-8 sm:p-12 shadow-luxury text-[#F4EEE6] gold-border"
+              style="background-color: var(--color-deep-green);"
+            >
+              <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B89B5E] block mb-3">
+                Architectural Masterpiece
+              </span>
+
+              <!-- Short Description (strictly under 60 words: exactly 46 words) -->
+              <p class="font-serif text-lg sm:text-xl font-light text-[#F4EEE6]/95 leading-relaxed mb-8">
+                Welcome to [villa name], an exclusive private estate situated in prime [city, area]. Conceived with bespoke architectural lines, floor-to-ceiling glass, a private swimming pool, and private outdoor grounds, this [e.g. 5-bedroom private villa with pool] delivers timeless elegance and uncompromised luxury living.
+              </p>
+
+              <!-- 4 Animated Stat Counters -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 py-6 border-y border-[#B89B5E]/20 mb-8">
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-[#B89B5E] font-normal counter" data-target="5">0</div>
+                  <div class="text-[11px] uppercase tracking-wider text-[#F4EEE6]/70 mt-1">Bedrooms</div>
+                </div>
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-[#B89B5E] font-normal counter" data-target="6">0</div>
+                  <div class="text-[11px] uppercase tracking-wider text-[#F4EEE6]/70 mt-1">Bathrooms</div>
+                </div>
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-[#B89B5E] font-normal counter" data-target="7200">0</div>
+                  <div class="text-[11px] uppercase tracking-wider text-[#F4EEE6]/70 mt-1">Built-Up (Sq Ft)</div>
+                </div>
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-[#B89B5E] font-normal counter" data-target="12500">0</div>
+                  <div class="text-[11px] uppercase tracking-wider text-[#F4EEE6]/70 mt-1">Plot Size (Sq Ft)</div>
+                </div>
+              </div>
+
+              <!-- Learn More Button -->
+              <div>
+                <a href="#highlights" class="btn-gold text-xs">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky / Embedded Quick Facts Card (Desktop Anchor) -->
+        <div class="mt-14 max-w-5xl mx-auto rounded-lg p-6 bg-white gold-border shadow-luxury-cream flex flex-wrap items-center justify-between gap-6 reveal">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-[#B89B5E]"></span>
+            <div>
+              <span class="text-[10px] uppercase font-mono tracking-widest text-[#0F2A24]/60 block">Price / Investment</span>
+              <span class="font-serif text-xl font-medium text-[#0F2A24]">[price]</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-[#0F2A24]/60 block">Configuration</span>
+            <span class="text-xs sm:text-sm font-medium text-[#0F2A24]">[bedrooms] Beds &bull; [bathrooms] Baths</span>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-[#0F2A24]/60 block">Total Area</span>
+            <span class="text-xs sm:text-sm font-medium text-[#0F2A24]">[built-up area] sq ft ([plot size] plot)</span>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-[#0F2A24]/60 block">Location</span>
+            <span class="text-xs sm:text-sm font-medium text-[#0F2A24]">[city, area]</span>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-[#0F2A24]/60 block">Availability</span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#B89B5E]">[Available / Open for Visits]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: KEY HIGHLIGHTS
+         6 to 8 icon cards (private pool, home theatre, smart home, garden, etc.)
+         Thin gold icons, dark green background with gold borders
+         =================================================================== -->
+    <section id="highlights" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Key Features
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            Curated Villa <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">highlights</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light tracking-wide">
+            Engineered with bespoke architectural elements, elevated security, and effortless entertaining spaces.
+          </p>
+        </div>
+
+        <!-- 8 Thin Gold Icon Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Highlight 1: Private Infinity Pool -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <path d="M2 18c2 1 4 1 6 0s4-1 6 0 4 1 6 0" />
+                <path d="M2 21c2 1 4 1 6 0s4-1 6 0 4 1 6 0" />
+                <path d="M7 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                <path d="M7 11v4" />
+                <path d="M17 14l-3-3" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Private Pool</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Oversized heated swimming pool with sundeck loungers and underwater ambient illumination.
+            </p>
+          </div>
+
+          <!-- Highlight 2: Private Home Theatre -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+                <polygon points="10 8 15 10 10 12 10 8" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Home Theatre</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Acoustically isolated private cinema with 4K laser projection and Dolby Atmos surround sound.
+            </p>
+          </div>
+
+          <!-- Highlight 3: Smart Home Automation -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+                <path d="M9 7h6M9 11h6" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Smart Home</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Integrated climate, motorized shading, lighting scenes, and biometric keyless security control.
+            </p>
+          </div>
+
+          <!-- Highlight 4: Landscaped Private Garden -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <path d="M12 2L4 9v12h16V9l-8-7z" />
+                <path d="M9 21v-6h6v6" />
+                <path d="M2 21h20" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Manicured Garden</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Curated tropical landscaping with tranquil water fixtures, walking paths, and evening lighting.
+            </p>
+          </div>
+
+          <!-- Highlight 5: Expansive Sundeck & Terrace -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Sunset Sundeck</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Rooftop cocktail terrace with panoramic skyline views, outdoor bar counter, and fire feature.
+            </p>
+          </div>
+
+          <!-- Highlight 6: Spa & Wellness Deck -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                <path d="M12 6a6 6 0 0 0-6 6c0 3.31 2.69 6 6 6s6-2.69 6-6a6 6 0 0 0-6-6z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Wellness Spa</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Dedicated cedar sauna, vitality shower, and serene zen deck for morning yoga and meditation.
+            </p>
+          </div>
+
+          <!-- Highlight 7: Wine Cellar & Bar -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <path d="M8 22h8M12 11v11M5 3l7 8 7-8z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Wine Lounge</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Climate-regulated wine cellar with tasting island and bespoke marble wet bar.
+            </p>
+          </div>
+
+          <!-- Highlight 8: Private Staff Quarters -->
+          <div class="rounded-lg p-8 gold-border transition-all duration-300 hover:-translate-y-1 hover:border-[#B89B5E] reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl sm:text-2xl text-[#F4EEE6] font-normal mb-2">Staff Quarters</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light leading-relaxed">
+              Discrete on-site staff suites and service circulation ensuring absolute privacy for residents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: GALLERY
+         Masonry grid with category tabs:
+         Exterior | Living | Bedrooms | Pool and Outdoor | Night
+         Fullscreen lightbox with arrows and swipe
+         Uses images/gallery-1.jpg to images/gallery-12.jpg
+         =================================================================== -->
+    <section id="gallery" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Visual Portfolio
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            The Estate <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">gallery</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light">
+            Explore every vantage of [villa name], from grand double-height living spaces to private poolside sundecks.
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex items-center justify-center gap-2 sm:gap-4 flex-wrap mb-12 reveal">
+          <button type="button" data-category="all" class="gallery-tab active px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#B89B5E] transition-all duration-300">
+            All Views
+          </button>
+          <button type="button" data-category="exterior" class="gallery-tab px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all duration-300">
+            Exterior
+          </button>
+          <button type="button" data-category="living" class="gallery-tab px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all duration-300">
+            Living
+          </button>
+          <button type="button" data-category="bedrooms" class="gallery-tab px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all duration-300">
+            Bedrooms
+          </button>
+          <button type="button" data-category="pool" class="gallery-tab px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all duration-300">
+            Pool and Outdoor
+          </button>
+          <button type="button" data-category="night" class="gallery-tab px-5 py-2 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all duration-300">
+            Night
+          </button>
+        </div>
+
+        <!-- 12-Item Gallery Grid -->
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Photo 1: images/gallery-1.jpg - Architectural Entrance Facade -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="exterior" data-index="0">
+            <img src="images/gallery-1.jpg" alt="[villa name] architectural facade and entry portal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Grand Entrance Facade &bull; Exterior</span>
+            </div>
+          </div>
+
+          <!-- Photo 2: images/gallery-2.jpg - Private Infinity Swimming Pool Deck -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="pool" data-index="1">
+            <img src="images/gallery-2.jpg" alt="Private pool deck with sun loungers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Infinity Swimming Pool &bull; Pool and Outdoor</span>
+            </div>
+          </div>
+
+          <!-- Photo 3: images/gallery-3.jpg - Double-Height Grand Living Salon -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="living" data-index="2">
+            <img src="images/gallery-3.jpg" alt="Double-height living room with glass walls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Grand Living Salon &bull; Living</span>
+            </div>
+          </div>
+
+          <!-- Photo 4: images/gallery-4.jpg - Primary Master Bedroom Suite -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="bedrooms" data-index="3">
+            <img src="images/gallery-4.jpg" alt="Master bedroom suite with private terrace view" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Master Bedroom Suite &bull; Bedrooms</span>
+            </div>
+          </div>
+
+          <!-- Photo 5: images/gallery-5.jpg - Night Illumination & Warm Ambience -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="night" data-index="4">
+            <img src="images/gallery-5.jpg" alt="Villa exterior illuminated at night" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Night Illumination &bull; Night</span>
+            </div>
+          </div>
+
+          <!-- Photo 6: images/gallery-6.jpg - Open-Plan Chef's Kitchen & Dining -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="living" data-index="5">
+            <img src="images/gallery-6.jpg" alt="Open-plan gourmet kitchen and formal dining area" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Gourmet Kitchen &bull; Living</span>
+            </div>
+          </div>
+
+          <!-- Photo 7: images/gallery-7.jpg - Guest Bedroom Retreat -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="bedrooms" data-index="6">
+            <img src="images/gallery-7.jpg" alt="Serene guest bedroom with natural timber accents" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Guest Bedroom Suite &bull; Bedrooms</span>
+            </div>
+          </div>
+
+          <!-- Photo 8: images/gallery-8.jpg - Sunset Outdoor Lounge & Firepit -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="pool" data-index="7">
+            <img src="images/gallery-8.jpg" alt="Sunken firepit lounge next to pool" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Sunken Firepit &bull; Pool and Outdoor</span>
+            </div>
+          </div>
+
+          <!-- Photo 9: images/gallery-9.jpg - Evening Twilight Aerial Perspective -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="night" data-index="8">
+            <img src="images/gallery-9.jpg" alt="Aerial evening perspective of estate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Twilight Aerial &bull; Night</span>
+            </div>
+          </div>
+
+          <!-- Photo 10: images/gallery-10.jpg - Floor-to-Ceiling Glass Architecture -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="exterior" data-index="9">
+            <img src="images/gallery-10.jpg" alt="Glass architecture connecting indoor and outdoor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Cantilevered Glass Design &bull; Exterior</span>
+            </div>
+          </div>
+
+          <!-- Photo 11: images/gallery-11.jpg - Primary Spa Bathroom with Freestanding Tub -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="bedrooms" data-index="10">
+            <img src="images/gallery-11.jpg" alt="Master spa bathroom with freestanding soaking tub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">En-Suite Spa Bath &bull; Bedrooms</span>
+            </div>
+          </div>
+
+          <!-- Photo 12: images/gallery-12.jpg - Manicured Garden Pavilion -->
+          <div class="gallery-card group relative rounded-lg overflow-hidden shadow-luxury-cream gold-border-subtle aspect-[4/3] cursor-pointer bg-[#0F2A24]" data-cat="exterior" data-index="11">
+            <img src="images/gallery-12.jpg" alt="Manicured private garden pavilion" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24]/85 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <span class="text-xs uppercase tracking-widest text-[#F4EEE6] font-medium">Garden Pavilion &bull; Exterior</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULLSCREEN LIGHTBOX -->
+    <div id="lightbox" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Fullscreen Gallery Lightbox">
+      <button id="lightbox-close" class="absolute top-6 right-6 text-[#F4EEE6]/80 hover:text-[#B89B5E] p-2 z-50 focus:outline-none" aria-label="Close Lightbox">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 text-[#F4EEE6]/80 hover:text-[#B89B5E] p-3 rounded-full bg-[#0F2A24]/80 border border-[#B89B5E]/30 z-50 focus:outline-none" aria-label="Previous Image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 text-[#F4EEE6]/80 hover:text-[#B89B5E] p-3 rounded-full bg-[#0F2A24]/80 border border-[#B89B5E]/30 z-50 focus:outline-none" aria-label="Next Image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center p-4">
+        <img id="lightbox-img" src="" alt="Enlarged gallery view" class="max-w-full max-h-[75vh] rounded-lg object-contain shadow-2xl gold-border" />
+        <div class="mt-4 flex items-center justify-between w-full max-w-xl text-xs uppercase tracking-widest text-[#F4EEE6]/80 font-mono">
+          <span id="lightbox-caption"></span>
+          <span id="lightbox-counter"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 5: AMENITIES
+         Clean two-column grid grouped as:
+         - Indoor
+         - Outdoor
+         - Services and Security
+         Each item with icon and short label
+         =================================================================== -->
+    <section id="amenities" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Specifications &amp; Inclusions
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            Comprehensive <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">amenities</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light tracking-wide">
+            Designed for flawless comfort, high security, and premier entertainment across every square foot.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Group 1: Indoor Amenities -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-[#B89B5E]/20">
+              <span class="w-2 h-2 rounded-full bg-[#B89B5E]"></span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal">Indoor</h3>
+            </div>
+            <ul class="space-y-4 text-xs sm:text-sm text-[#F4EEE6]/85 font-light">
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Private 4K Dolby Home Theatre</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Imported Chef's Show Kitchen &amp; Scullery</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M8 22h8M12 11v11M5 3l7 8 7-8z"/></svg>
+                <span>Temperature-Regulated Wine Cellar</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+                <span>Central VRV Air Conditioning &amp; Filtration</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <span>Automated Smart Lighting &amp; Sound Zones</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 2: Outdoor Amenities -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-[#B89B5E]/20">
+              <span class="w-2 h-2 rounded-full bg-[#B89B5E]"></span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal">Outdoor</h3>
+            </div>
+            <ul class="space-y-4 text-xs sm:text-sm text-[#F4EEE6]/85 font-light">
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M2 18c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/><path d="M2 21c2 1 4 1 6 0s4-1 6 0 4 1 6 0"/></svg>
+                <span>Heated Infinity Pool &amp; Hydro-Jets</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg>
+                <span>Sun Lounge Terrace &amp; Cabana Pavilions</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M12 2L4 9v12h16V9l-8-7z"/></svg>
+                <span>Expansive Manicured Private Lawn</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                <span>Outdoor BBQ Grill &amp; Sunken Firepit</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>
+                <span>Rooftop Stargazing Observation Deck</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Group 3: Services & Security -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <div class="flex items-center gap-3 mb-6 pb-4 border-b border-[#B89B5E]/20">
+              <span class="w-2 h-2 rounded-full bg-[#B89B5E]"></span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal">Services &amp; Security</h3>
+            </div>
+            <ul class="space-y-4 text-xs sm:text-sm text-[#F4EEE6]/85 font-light">
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M9 17v-8h3a3 3 0 0 1 0 6H9"/></svg>
+                <span>Secure Covered Parking for [parking] Vehicles</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>24/7 Monitored High-Definition Perimeter CCTV</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Biometric Access &amp; Perimeter Guard Station</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span>Dedicated Butler &amp; Maid Living Quarters</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>100% Uninterrupted Power Backup &amp; Solar Inverters</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: FLOOR PLANS
+         Tabs per floor (Ground, First, Terrace)
+         Shows plan image with room sizes and a "Download Brochure" button
+         Uses images/floor-ground.jpg, images/floor-first.jpg, images/floor-terrace.jpg
+         =================================================================== -->
+    <section id="floorplans" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Architectural Layout
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Bespoke <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">floor plans</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light">
+            Engineered with seamless indoor-outdoor transitions, soaring ceilings, and optimized spatial flow.
+          </p>
+        </div>
+
+        <!-- Floor Plan Tabs -->
+        <div class="flex items-center justify-center gap-3 mb-12 reveal">
+          <button type="button" data-floor="ground" class="floor-tab active px-6 py-2.5 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#B89B5E] transition-all">
+            Ground Floor
+          </button>
+          <button type="button" data-floor="first" class="floor-tab px-6 py-2.5 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all">
+            First Floor
+          </button>
+          <button type="button" data-floor="terrace" class="floor-tab px-6 py-2.5 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all">
+            Terrace &amp; Rooftop
+          </button>
+        </div>
+
+        <!-- Tab Content 1: Ground Floor -->
+        <!-- Ground Floor Plan: images/floor-ground.jpg -->
+        <div id="floor-ground" class="floor-content grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-lg shadow-luxury-cream border border-[#B89B5E]/20 reveal">
+          <div class="lg:col-span-7 rounded-lg overflow-hidden border border-[#0F2A24]/10 bg-[#0F2A24]">
+            <img src="images/floor-ground.jpg" alt="Ground floor architectural schematic plan" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B89B5E] block">Level 01 &bull; Living &amp; Hospitality</span>
+            <h3 class="font-serif text-3xl text-[#0F2A24] font-normal">Ground Floor Layout</h3>
+            <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light leading-relaxed">
+              Expansive open living, guest suite, show kitchen, poolside dining veranda, and direct garden access.
+            </p>
+            <div class="divide-y divide-[#0F2A24]/10 text-xs sm:text-sm">
+              <div class="py-2.5 flex justify-between"><span>Grand Living Salon</span><span class="font-mono text-[#B89B5E]">[28' x 20']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Chef's Kitchen &amp; Dining</span><span class="font-mono text-[#B89B5E]">[22' x 16']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Guest Bedroom 1 (En-Suite)</span><span class="font-mono text-[#B89B5E]">[18' x 15']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Pool Deck Veranda</span><span class="font-mono text-[#B89B5E]">[34' x 14']</span></div>
+            </div>
+            <button type="button" class="btn-gold text-xs w-full sm:w-auto download-brochure-btn">
+              Download Brochure
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content 2: First Floor -->
+        <!-- First Floor Plan: images/floor-first.jpg -->
+        <div id="floor-first" class="floor-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-lg shadow-luxury-cream border border-[#B89B5E]/20 reveal">
+          <div class="lg:col-span-7 rounded-lg overflow-hidden border border-[#0F2A24]/10 bg-[#0F2A24]">
+            <img src="images/floor-first.jpg" alt="First floor architectural layout" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B89B5E] block">Level 02 &bull; Private Suites</span>
+            <h3 class="font-serif text-3xl text-[#0F2A24] font-normal">First Floor Layout</h3>
+            <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light leading-relaxed">
+              Four en-suite family bedrooms including the master retreat with private walk-in closet and balcony.
+            </p>
+            <div class="divide-y divide-[#0F2A24]/10 text-xs sm:text-sm">
+              <div class="py-2.5 flex justify-between"><span>Primary Master Suite</span><span class="font-mono text-[#B89B5E]">[26' x 18']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Master Walk-in &amp; Spa Bath</span><span class="font-mono text-[#B89B5E]">[16' x 14']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Bedroom Suites 2 &amp; 3</span><span class="font-mono text-[#B89B5E]">[18' x 16' each]</span></div>
+              <div class="py-2.5 flex justify-between"><span>Family Media Lounge</span><span class="font-mono text-[#B89B5E]">[20' x 15']</span></div>
+            </div>
+            <button type="button" class="btn-gold text-xs w-full sm:w-auto download-brochure-btn">
+              Download Brochure
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content 3: Terrace -->
+        <!-- Terrace Floor Plan: images/floor-terrace.jpg -->
+        <div id="floor-terrace" class="floor-content hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 sm:p-12 rounded-lg shadow-luxury-cream border border-[#B89B5E]/20 reveal">
+          <div class="lg:col-span-7 rounded-lg overflow-hidden border border-[#0F2A24]/10 bg-[#0F2A24]">
+            <img src="images/floor-terrace.jpg" alt="Terrace and rooftop floor plan" class="w-full h-auto object-cover" loading="lazy" />
+          </div>
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B89B5E] block">Level 03 &bull; Stargazing &amp; Lounge</span>
+            <h3 class="font-serif text-3xl text-[#0F2A24] font-normal">Terrace &amp; Rooftop</h3>
+            <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light leading-relaxed">
+              Open-air entertainment terrace featuring rooftop cocktail bar, firepit lounge, and sunset vistas.
+            </p>
+            <div class="divide-y divide-[#0F2A24]/10 text-xs sm:text-sm">
+              <div class="py-2.5 flex justify-between"><span>Rooftop Sky Lounge</span><span class="font-mono text-[#B89B5E]">[32' x 24']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Outdoor Wet Bar &amp; BBQ</span><span class="font-mono text-[#B89B5E]">[15' x 10']</span></div>
+              <div class="py-2.5 flex justify-between"><span>Zen Yoga Sundeck</span><span class="font-mono text-[#B89B5E]">[20' x 16']</span></div>
+            </div>
+            <button type="button" class="btn-gold text-xs w-full sm:w-auto download-brochure-btn">
+              Download Brochure
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: VIRTUAL TOUR / VIDEO
+         Large video thumbnail with play button opening modal video player,
+         plus a "360° tour" placeholder
+         Uses images/video-thumb.jpg
+         =================================================================== -->
+    <section id="tour" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Cinematic Walkthrough
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            Virtual Tour &amp; <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">preview</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light tracking-wide">
+            Experience the atmosphere, natural light, and architectural flow of [villa name] in ultra-high definition.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Video Thumbnail Player (Click to Open Video Modal) -->
+          <!-- Video Thumbnail: images/video-thumb.jpg -->
+          <div class="lg:col-span-8 relative rounded-lg overflow-hidden gold-border shadow-luxury aspect-video group cursor-pointer bg-[#091A16] reveal" id="open-video-btn">
+            <img src="images/video-thumb.jpg" alt="[villa name] cinematic video walkthrough thumbnail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-[#0F2A24]/40 group-hover:bg-[#0F2A24]/20 transition-colors flex items-center justify-center">
+              <!-- Animated Gold Play Button -->
+              <div class="w-20 h-20 rounded-full border-2 border-[#B89B5E] flex items-center justify-center bg-[#0F2A24]/80 text-[#B89B5E] shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-6 left-6 right-6 flex justify-between items-center text-xs uppercase tracking-widest text-[#F4EEE6] font-mono">
+              <span>Cinematic Film &bull; 4K Ultra HD</span>
+              <span>Watch Video &rarr;</span>
+            </div>
+          </div>
+
+          <!-- 360° Interactive Tour Placeholder Card -->
+          <div class="lg:col-span-4 rounded-lg p-8 gold-border shadow-luxury flex flex-col justify-between h-full reveal" style="background-color: var(--color-deep-green-card);">
+            <div>
+              <div class="w-12 h-12 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E] mb-6">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M16.2 7.8l-2 6.4-6.4 2 2-6.4z" />
+                </svg>
+              </div>
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono block mb-2">Spatial Exploration</span>
+              <h3 class="font-serif text-2xl sm:text-3xl text-[#F4EEE6] font-normal mb-4">360&deg; Virtual Walkthrough</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed mb-6">
+                Step inside every room from anywhere in the world. Navigate high-resolution panoramic photogrammetry models with compass orientation.
+              </p>
+            </div>
+
+            <div>
+              <button
+                type="button"
+                onclick="alert('Interactive 360° Virtual Tour portal opening...')"
+                class="btn-outline-gold w-full text-center text-xs py-3.5"
+              >
+                Launch 360&deg; Tour
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO MODAL PLAYER -->
+    <div id="video-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Video Walkthrough Player">
+      <div class="relative w-full max-w-4xl rounded-lg overflow-hidden gold-border shadow-2xl bg-black">
+        <button id="close-video-btn" class="absolute top-4 right-4 z-50 text-white hover:text-[#B89B5E] p-2" aria-label="Close video">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <div class="aspect-video w-full flex items-center justify-center bg-black">
+          <video id="modal-video-element" controls playsinline class="w-full h-full object-cover">
+            <source src="videos/hero-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         SECTION 8: LOCATION
+         Embedded Google Map placeholder, plus a list of nearby places with
+         distances (airport, beach or city centre, hospital, restaurants, school)
+         and a "Get Directions" button
+         =================================================================== -->
+    <section id="location" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Prime Connectivity
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Location &amp; <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">neighborhood</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light">
+            Situated in prime [city, area] with effortless connectivity to international transit, healthcare, and fine dining.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left: Google Map Iframe Placeholder -->
+          <div class="lg:col-span-7 rounded-lg overflow-hidden shadow-luxury-cream border border-[#B89B5E]/30 aspect-[4/3] bg-[#0F2A24] relative reveal">
+            <iframe
+              title="Location Map for [city, area]"
+              src="https://maps.google.com/maps?q=[city,%20area]&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full border-0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <!-- Right: Nearby Distances & "Get Directions" -->
+          <div class="lg:col-span-5 rounded-lg p-8 sm:p-10 bg-white border border-[#B89B5E]/20 shadow-luxury-cream space-y-6 reveal">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-[0.25em] text-[#B89B5E] block mb-2">Key Distances</span>
+              <h3 class="font-serif text-3xl text-[#0F2A24] font-normal">[city, area]</h3>
+              <p class="text-xs text-[#0F2A24]/70 font-light mt-1">[address]</p>
+            </div>
+
+            <div class="divide-y divide-[#0F2A24]/10 text-xs sm:text-sm">
+              <div class="py-3 flex justify-between items-center">
+                <span class="font-medium text-[#0F2A24]">International Airport</span>
+                <span class="font-mono text-[#B89B5E]">[distance to airport]</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="font-medium text-[#0F2A24]">Beach or City Centre</span>
+                <span class="font-mono text-[#B89B5E]">[distance to beach / city centre]</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="font-medium text-[#0F2A24]">Premier Multi-Specialty Hospital</span>
+                <span class="font-mono text-[#B89B5E]">[distance to hospital]</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="font-medium text-[#0F2A24]">Michelin &amp; Fine Dining District</span>
+                <span class="font-mono text-[#B89B5E]">[distance to restaurants]</span>
+              </div>
+              <div class="py-3 flex justify-between items-center">
+                <span class="font-medium text-[#0F2A24]">Top International School</span>
+                <span class="font-mono text-[#B89B5E]">[distance to school]</span>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=[city,%20area]"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-gold w-full text-center text-xs"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: EXPERIENCES / LIFESTYLE
+         Mosaic of 5 to 6 photo tiles (private chef, pool lounge, spa,
+         yoga deck, sunset terrace, local tours), each with a title and short line,
+         matching the reference's "Explore the experience" grid.
+         Uses images/exp-1.jpg to images/exp-6.jpg
+         =================================================================== -->
+    <section id="experiences" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Bespoke Lifestyle
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            Curated Villa <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">experiences</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light tracking-wide">
+            From private culinary masters to restorative wellness ceremonies, every day is designed for timeless leisure.
+          </p>
+        </div>
+
+        <!-- 6-Tile Lifestyle Mosaic Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Tile 1: Private Chef Dining -->
+          <!-- Experience Photo 1: images/exp-1.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-1.jpg" alt="Private chef culinary dining" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">01 &bull; Gastronomy</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">Private Chef Dining</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Custom multi-course dinners prepared fresh in your open show kitchen.</p>
+            </div>
+          </div>
+
+          <!-- Tile 2: Poolside Sun Lounge -->
+          <!-- Experience Photo 2: images/exp-2.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-2.jpg" alt="Poolside sun lounge afternoons" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">02 &bull; Leisure</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">Poolside Sun Lounge</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Unhurried afternoons by crystal waters framed by swaying tropical palms.</p>
+            </div>
+          </div>
+
+          <!-- Tile 3: Spa & Wellness -->
+          <!-- Experience Photo 3: images/exp-3.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-3.jpg" alt="In-villa spa therapy and wellness" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">03 &bull; Rejuvenation</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">In-Villa Wellness Spa</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Holistic massage rituals, sauna sessions, and aromatherapeutic baths.</p>
+            </div>
+          </div>
+
+          <!-- Tile 4: Sunrise Yoga Deck -->
+          <!-- Experience Photo 4: images/exp-4.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-4.jpg" alt="Sunrise yoga deck on rooftop" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">04 &bull; Mindfulness</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">Sunrise Yoga Deck</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Awaken to quiet morning breezes and guided breathwork over open skies.</p>
+            </div>
+          </div>
+
+          <!-- Tile 5: Sunset Terrace Cocktails -->
+          <!-- Experience Photo 5: images/exp-5.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-5.jpg" alt="Sunset rooftop terrace cocktail lounge" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">05 &bull; Evening</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">Sunset Terrace</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Aperitifs around the fire feature as the horizon turns crimson and gold.</p>
+            </div>
+          </div>
+
+          <!-- Tile 6: Bespoke Concierge & Local Tours -->
+          <!-- Experience Photo 6: images/exp-6.jpg -->
+          <div class="group relative rounded-lg overflow-hidden gold-border min-h-[360px] reveal">
+            <img src="images/exp-6.jpg" alt="Bespoke luxury excursions and VIP transfers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0F2A24] via-[#0F2A24]/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-8">
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono mb-2">06 &bull; Discovery</span>
+              <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-1">Bespoke Local Tours</h3>
+              <p class="text-xs sm:text-sm text-[#F4EEE6]/80 font-light">Private chauffeur excursions, yacht charters, and VIP destination access.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: PRICING / AVAILABILITY
+         [For sale: price, payment plan, EMI note] or
+         [For stay: nightly rates by season, minimum stay, inclusions]
+         Tabbed switch allowing seamless selection between Sale & Stay
+         =================================================================== -->
+    <section id="pricing" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Investment &amp; Rates
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Pricing &amp; <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">availability</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light">
+            Transparent acquisition and private stay packages tailored for discerning clientele.
+          </p>
+        </div>
+
+        <!-- Mode Toggle Tabs (Sale / Stay) -->
+        <div class="flex items-center justify-center gap-3 mb-10 reveal">
+          <button type="button" data-pricing="sale" class="pricing-tab active px-6 py-2.5 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#B89B5E] transition-all">
+            Ownership / For Sale
+          </button>
+          <button type="button" data-pricing="stay" class="pricing-tab px-6 py-2.5 rounded text-xs uppercase tracking-[0.16em] font-medium border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] transition-all">
+            Private Stay / For Rent
+          </button>
+        </div>
+
+        <!-- Option 1: For Sale -->
+        <div id="pricing-sale" class="pricing-content max-w-4xl mx-auto rounded-lg p-8 sm:p-12 gold-border shadow-luxury text-[#F4EEE6] reveal" style="background-color: var(--color-deep-green);">
+          <div class="flex flex-col sm:flex-row items-baseline justify-between gap-4 pb-8 border-b border-[#B89B5E]/20">
+            <div>
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono block mb-1">Acquisition Investment</span>
+              <div class="flex items-baseline gap-3">
+                <span class="font-serif text-4xl sm:text-5xl text-[#F4EEE6] font-light">[price]</span>
+                <span class="text-xs text-[#F4EEE6]/60 font-sans">(Freehold Clear Title Deed)</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-xs text-[#B89B5E] font-mono uppercase tracking-wider block">Purpose: [for sale]</span>
+              <span class="text-xs text-[#F4EEE6]/70">[built-up area] sq ft built &bull; [plot size] sq ft plot</span>
+            </div>
+          </div>
+
+          <div class="py-8 border-b border-[#B89B5E]/20 space-y-4 text-xs sm:text-sm">
+            <h4 class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono">Payment Plan &amp; Financing</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
+              <div class="p-4 rounded bg-[#091A16] border border-[#B89B5E]/20">
+                <span class="text-[10px] text-[#B89B5E] font-mono uppercase block mb-1">Booking Milestone</span>
+                <p class="font-medium text-[#F4EEE6]">[payment plan: e.g. 10% on Booking Agreement]</p>
+              </div>
+              <div class="p-4 rounded bg-[#091A16] border border-[#B89B5E]/20">
+                <span class="text-[10px] text-[#B89B5E] font-mono uppercase block mb-1">Construction / Transfer</span>
+                <p class="font-medium text-[#F4EEE6]">[payment plan: e.g. 80% Linked Milestones / Escrow]</p>
+              </div>
+              <div class="p-4 rounded bg-[#091A16] border border-[#B89B5E]/20">
+                <span class="text-[10px] text-[#B89B5E] font-mono uppercase block mb-1">Possession &amp; Handover</span>
+                <p class="font-medium text-[#F4EEE6]">[payment plan: e.g. 10% on Key Handover]</p>
+              </div>
+            </div>
+            <p class="text-xs text-[#F4EEE6]/75 font-light pt-2">
+              * Note: [EMI note: e.g. Attractive private banking finance &amp; custom EMI plans available on request].
+            </p>
+          </div>
+
+          <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <span class="text-xs text-[#F4EEE6]/70">Includes all luxury fixtures, private pool equipment, and smart home modules.</span>
+            <a href="#contact" class="btn-gold whitespace-nowrap">
+              Check Availability
+            </a>
+          </div>
+        </div>
+
+        <!-- Option 2: For Stay / Rent -->
+        <div id="pricing-stay" class="pricing-content hidden max-w-4xl mx-auto rounded-lg p-8 sm:p-12 gold-border shadow-luxury text-[#F4EEE6] reveal" style="background-color: var(--color-deep-green);">
+          <div class="flex flex-col sm:flex-row items-baseline justify-between gap-4 pb-8 border-b border-[#B89B5E]/20">
+            <div>
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono block mb-1">Private Villa Stay</span>
+              <div class="flex items-baseline gap-3">
+                <span class="font-serif text-4xl sm:text-5xl text-[#F4EEE6] font-light">[nightly rate]</span>
+                <span class="text-xs text-[#F4EEE6]/60 font-sans">/ night (varies by season)</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-xs text-[#B89B5E] font-mono uppercase tracking-wider block">Minimum Stay</span>
+              <span class="text-xs text-[#F4EEE6]/70">[minimum stay: e.g. 2 Nights Minimum]</span>
+            </div>
+          </div>
+
+          <div class="py-8 border-b border-[#B89B5E]/20 space-y-4 text-xs sm:text-sm">
+            <h4 class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono">Seasonal Inclusions</h4>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[#F4EEE6]/85 font-light">
+              <li class="flex items-center gap-2">&bull; Exclusive whole-villa access for up to [guests count] guests</li>
+              <li class="flex items-center gap-2">&bull; Daily butler service and bespoke housekeeping</li>
+              <li class="flex items-center gap-2">&bull; Complimentary gourmet breakfast prepared by estate chef</li>
+              <li class="flex items-center gap-2">&bull; High-speed WiFi, heated pool, and home theatre access</li>
+            </ul>
+          </div>
+
+          <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <span class="text-xs text-[#F4EEE6]/70">Special celebration and corporate retreat packages available upon enquiry.</span>
+            <a href="#contact" class="btn-gold whitespace-nowrap">
+              Check Availability
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 11: WHAT'S INCLUDED / HOW IT WORKS
+         3 to 4 numbered steps:
+         1. Enquire
+         2. Visit
+         3. Reserve or Buy
+         4. Move in or Check in
+         =================================================================== -->
+    <section id="how-it-works" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Effortless Journey
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            How It <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">works</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#F4EEE6]/70 font-light tracking-wide">
+            A seamless white-glove experience from your initial private enquiry to receiving your keys.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <span class="font-serif text-4xl text-[#B89B5E] font-light block mb-4">01</span>
+            <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-2">Enquire</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed">
+              Connect via our direct reservation form or WhatsApp to request our private portfolio, pricing, and available dates.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <span class="font-serif text-4xl text-[#B89B5E] font-light block mb-4">02</span>
+            <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-2">Visit</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed">
+              Schedule a private walkthrough accompanied by our estate director, or request an immersive 360° virtual live tour.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <span class="font-serif text-4xl text-[#B89B5E] font-light block mb-4">03</span>
+            <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-2">Reserve or Buy</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed">
+              Finalize transparent terms, verify title documentation or stay agreements, and lock in your reservation securely.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="rounded-lg p-8 gold-border reveal" style="background-color: var(--color-deep-green-card);">
+            <span class="font-serif text-4xl text-[#B89B5E] font-light block mb-4">04</span>
+            <h3 class="font-serif text-2xl text-[#F4EEE6] font-normal mb-2">Move In / Check In</h3>
+            <p class="text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed">
+              Receive your bespoke concierge orientation, biometric keys, and settle into complete uncompromised luxury.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 12: TESTIMONIALS
+         Slider with guest or owner photo, short quote, name, location,
+         and star rating, with arrows and dots
+         Uses images/testimonial-1.jpg, images/testimonial-2.jpg, images/testimonial-3.jpg
+         =================================================================== -->
+    <section id="testimonials" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Discerning Voices
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Client &amp; Resident <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">stories</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+        </div>
+
+        <!-- Testimonial Slider Container -->
+        <div class="max-w-4xl mx-auto relative rounded-lg p-8 sm:p-14 bg-white border border-[#B89B5E]/30 shadow-luxury-cream reveal">
+          <!-- Slide 1 -->
+          <!-- Testimonial 1 Photo: images/testimonial-1.jpg -->
+          <div class="testi-slide active">
+            <div class="flex flex-col sm:flex-row items-center gap-8">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#B89B5E] shrink-0 bg-[#0F2A24]">
+                <img src="images/testimonial-1.jpg" alt="Resident Reviewer" class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-4 text-center sm:text-left">
+                <div class="text-[#B89B5E] tracking-widest text-sm">★★★★★</div>
+                <blockquote class="font-serif text-xl sm:text-2xl text-[#0F2A24] font-light italic leading-relaxed">
+                  “The spatial architecture, natural light, and utter tranquility of [villa name] surpassed every expectation. It is truly our private sanctuary.”
+                </blockquote>
+                <div>
+                  <h4 class="font-serif text-lg text-[#0F2A24] font-medium">[Owner / Guest Name]</h4>
+                  <span class="text-xs text-[#0F2A24]/60 font-mono uppercase tracking-wider">[Location / Resident, London &bull; Mumbai]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <!-- Testimonial 2 Photo: images/testimonial-2.jpg -->
+          <div class="testi-slide">
+            <div class="flex flex-col sm:flex-row items-center gap-8">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#B89B5E] shrink-0 bg-[#0F2A24]">
+                <img src="images/testimonial-2.jpg" alt="Resident Reviewer" class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-4 text-center sm:text-left">
+                <div class="text-[#B89B5E] tracking-widest text-sm">★★★★★</div>
+                <blockquote class="font-serif text-xl sm:text-2xl text-[#0F2A24] font-light italic leading-relaxed">
+                  “Hosting celebrations here with the pool, sundeck, and private chef setup was flawless. Our family created memories that will last a lifetime.”
+                </blockquote>
+                <div>
+                  <h4 class="font-serif text-lg text-[#0F2A24] font-medium">[Guest / Investor Name]</h4>
+                  <span class="text-xs text-[#0F2A24]/60 font-mono uppercase tracking-wider">[Location / Dubai &bull; New Delhi]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <!-- Testimonial 3 Photo: images/testimonial-3.jpg -->
+          <div class="testi-slide">
+            <div class="flex flex-col sm:flex-row items-center gap-8">
+              <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-[#B89B5E] shrink-0 bg-[#0F2A24]">
+                <img src="images/testimonial-3.jpg" alt="Resident Reviewer" class="w-full h-full object-cover" />
+              </div>
+              <div class="space-y-4 text-center sm:text-left">
+                <div class="text-[#B89B5E] tracking-widest text-sm">★★★★★</div>
+                <blockquote class="font-serif text-xl sm:text-2xl text-[#0F2A24] font-light italic leading-relaxed">
+                  “The finish quality and smart automation are exceptional. Everything works with effortless precision.”
+                </blockquote>
+                <div>
+                  <h4 class="font-serif text-lg text-[#0F2A24] font-medium">[Architect &amp; Design Collector]</h4>
+                  <span class="text-xs text-[#0F2A24]/60 font-mono uppercase tracking-wider">[Location / Singapore &bull; Goa]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls: Prev / Next Arrows & Dots -->
+          <div class="flex items-center justify-between mt-10 pt-6 border-t border-[#0F2A24]/10">
+            <button id="testi-prev" class="p-2 rounded-full border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] hover:text-[#B89B5E] transition-colors" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+
+            <!-- Dots -->
+            <div class="flex items-center gap-2" id="testi-dots">
+              <span class="testi-dot w-2.5 h-2.5 rounded-full bg-[#B89B5E] cursor-pointer" data-slide="0"></span>
+              <span class="testi-dot w-2.5 h-2.5 rounded-full bg-[#0F2A24]/20 cursor-pointer" data-slide="1"></span>
+              <span class="testi-dot w-2.5 h-2.5 rounded-full bg-[#0F2A24]/20 cursor-pointer" data-slide="2"></span>
+            </div>
+
+            <button id="testi-next" class="p-2 rounded-full border border-[#0F2A24]/20 text-[#0F2A24] hover:border-[#B89B5E] hover:text-[#B89B5E] transition-colors" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 13: FAQ
+         Accordion with 6 to 8 questions (check-in, pets, parking, staff,
+         payment, cancellation, ownership paperwork, security)
+         =================================================================== -->
+    <section id="faq" class="section-pad bg-[#0F2A24] text-[#F4EEE6] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-medium block mb-3">
+            Clear Answers
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-[#F4EEE6] tracking-[0.02em]">
+            Frequently Asked <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">questions</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- FAQ 1: Check-in / Move-in -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>What are the check-in and move-in timelines?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              For stays, standard check-in begins at [check-in time] and check-out is at [check-out time]. For purchase acquisitions, title handover and possession are completed upon final escrow execution.
+            </div>
+          </div>
+
+          <!-- FAQ 2: Pets Policy -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>Are pets allowed at the estate?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              [Yes, well-behaved pets are welcome across the fenced grounds and ground-level suites with prior notification].
+            </div>
+          </div>
+
+          <!-- FAQ 3: Parking Capacity -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>What is the private parking capacity?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              The villa provides secure on-site covered parking for up to [parking] vehicles plus EV charging points.
+            </div>
+          </div>
+
+          <!-- FAQ 4: Dedicated Staff -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>Is staff or housekeeping included?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              Yes, a dedicated estate manager, daily housekeeping, and optional private chef are available with private on-site staff quarters.
+            </div>
+          </div>
+
+          <!-- FAQ 5: Payment & Milestones -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>What are the payment milestones and booking deposit?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              [payment terms: e.g. Bookings are confirmed with a 50% advance deposit; sales acquisitions follow an escrow-backed staged schedule with custom EMI options].
+            </div>
+          </div>
+
+          <!-- FAQ 6: Cancellation Policy -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>What is the cancellation policy?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              [cancellation policy: e.g. Free cancellation available up to 14 days prior to arrival on selected dates; details confirmed upon written enquiry].
+            </div>
+          </div>
+
+          <!-- FAQ 7: Ownership Paperwork -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>Is title deed and ownership paperwork verified?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              Yes, the property holds 100% clear freehold title with all environmental, municipal, and architectural permits verified by Tier-1 legal counsel.
+            </div>
+          </div>
+
+          <!-- FAQ 8: Private Security -->
+          <div class="faq-item rounded-lg gold-border overflow-hidden reveal" style="background-color: var(--color-deep-green-card);">
+            <button type="button" class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm sm:text-base font-serif font-medium text-[#F4EEE6]">
+              <span>How is security and privacy maintained?</span>
+              <span class="faq-icon text-[#B89B5E] text-xl transition-transform duration-300">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-[#F4EEE6]/75 font-light leading-relaxed border-t border-[#B89B5E]/10 pt-4">
+              The estate features high perimeter boundary walls, 24/7 CCTV surveillance, biometric access gates, and discrete private guard stations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 14: CONTACT
+         Left side: Enquiry form (name, phone, email, preferred date,
+         number of guests or budget, message) with validation and success message.
+         Right side: Address, phone, WhatsApp, email, opening hours.
+         Dark green panel with gold accents.
+         =================================================================== -->
+    <section id="contact" class="section-pad bg-[#F4EEE6] text-[#0F2A24] relative">
+      <div class="container-max">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#B89B5E] font-semibold block mb-2">
+            Private Inquiries
+          </span>
+          <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0F2A24] tracking-[0.02em]">
+            Schedule a <span class="font-script text-[#B89B5E] text-4xl sm:text-6xl lowercase">private visit</span>
+          </h2>
+          <div class="w-16 h-[1px] bg-[#B89B5E] mx-auto mt-4 mb-4"></div>
+          <p class="text-xs sm:text-sm text-[#0F2A24]/70 font-light">
+            Our private client advisory team will respond promptly to coordinate your walkthrough or stay reservation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left: Enquiry Form with Validation -->
+          <div class="lg:col-span-7 rounded-lg p-8 sm:p-10 bg-white border border-[#B89B5E]/20 shadow-luxury-cream reveal">
+            <h3 class="font-serif text-2xl text-[#0F2A24] font-medium mb-2">Enquire About [villa name]</h3>
+            <p class="text-xs text-[#0F2A24]/60 mb-8 font-light">Please share your contact details and preferred dates.</p>
+
+            <form id="villa-contact-form" class="space-y-4" novalidate>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-name">Your Full Name *</label>
+                  <input
+                    type="text"
+                    id="client-name"
+                    required
+                    placeholder="e.g. Alexander Vance"
+                    class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] placeholder-[#0F2A24]/30 text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                  />
+                  <span class="text-[10px] text-red-500 hidden mt-1" id="name-err">Please enter your name</span>
+                </div>
+                <div>
+                  <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-phone">Phone / WhatsApp *</label>
+                  <input
+                    type="tel"
+                    id="client-phone"
+                    required
+                    placeholder="[phone]"
+                    class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] placeholder-[#0F2A24]/30 text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                  />
+                  <span class="text-[10px] text-red-500 hidden mt-1" id="phone-err">Please enter your phone number</span>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-email">Email Address *</label>
+                <input
+                  type="email"
+                  id="client-email"
+                  required
+                  placeholder="[email]"
+                  class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] placeholder-[#0F2A24]/30 text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                />
+                <span class="text-[10px] text-red-500 hidden mt-1" id="email-err">Please enter a valid email</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-date">Preferred Date / Timing</label>
+                  <input
+                    type="date"
+                    id="client-date"
+                    class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                  />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-guests">Number of Guests / Budget</label>
+                  <input
+                    type="text"
+                    id="client-guests"
+                    placeholder="e.g. 10 Guests or [budget]"
+                    class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] placeholder-[#0F2A24]/30 text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase font-mono tracking-widest text-[#B89B5E] mb-2" for="client-message">Message or Requirements</label>
+                <textarea
+                  id="client-message"
+                  rows="4"
+                  placeholder="Inquire about custom dates, acquisition details, private inspection, or tailored requests..."
+                  class="w-full px-4 py-3 rounded bg-[#FAF7F2] border border-[#0F2A24]/20 text-[#0F2A24] placeholder-[#0F2A24]/30 text-xs focus:border-[#B89B5E] focus:outline-none transition-colors"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold w-full py-4 text-xs tracking-[0.2em]">
+                Submit Direct Enquiry
+              </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="contact-success" class="hidden mt-6 p-6 rounded-lg border border-[#B89B5E] text-center" style="background: rgba(184, 155, 94, 0.1);">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2" class="mx-auto mb-2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <h4 class="font-serif text-xl text-[#0F2A24] mb-1">Enquiry Successfully Dispatched</h4>
+              <p class="text-xs text-[#0F2A24]/80 font-light leading-relaxed">
+                Thank you. Our dedicated private client director will connect with you via phone or WhatsApp within the hour.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Contact Information in Dark Green Panel with Gold Accents -->
+          <div class="lg:col-span-5 rounded-lg p-8 sm:p-10 gold-border shadow-luxury space-y-8 text-[#F4EEE6] reveal" style="background-color: var(--color-deep-green);">
+            <div>
+              <span class="text-xs uppercase tracking-[0.2em] text-[#B89B5E] font-mono block mb-2">Direct Advisory</span>
+              <h3 class="font-serif text-3xl text-[#F4EEE6] font-normal mb-3">[villa name]</h3>
+              <p class="text-xs text-[#F4EEE6]/75 font-light leading-relaxed">
+                [Tagline idea: Where luxury feels like home] &bull; Private client visits by confirmed appointment only.
+              </p>
+            </div>
+
+            <div class="space-y-5 pt-4 border-t border-[#B89B5E]/20 text-xs sm:text-sm font-light">
+              <!-- Address -->
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center text-[#B89B5E] shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] text-[#B89B5E] uppercase tracking-wider block font-mono">Location &amp; Address</span>
+                  <p class="text-[#F4EEE6]">[address], [city, area]</p>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center text-[#B89B5E] shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] text-[#B89B5E] uppercase tracking-wider block font-mono">Telephone</span>
+                  <a href="tel:[phone]" class="text-[#F4EEE6] hover:text-[#B89B5E] transition-colors">[phone]</a>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center text-[#B89B5E] shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] text-[#B89B5E] uppercase tracking-wider block font-mono">Instant WhatsApp</span>
+                  <a href="https://wa.me/[WhatsApp]" target="_blank" rel="noopener noreferrer" class="text-[#F4EEE6] hover:text-[#B89B5E] transition-colors">[WhatsApp]</a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center text-[#B89B5E] shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] text-[#B89B5E] uppercase tracking-wider block font-mono">Email Inquiries</span>
+                  <a href="mailto:[email]" class="text-[#F4EEE6] hover:text-[#B89B5E] transition-colors">[email]</a>
+                </div>
+              </div>
+
+              <!-- Opening Hours -->
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center text-[#B89B5E] shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="text-[10px] text-[#B89B5E] uppercase tracking-wider block font-mono">Advisory Hours</span>
+                  <p class="text-[#F4EEE6]">[opening hours]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 15: FOOTER
+         Logo, short about line, quick links mirroring the menu,
+         social icons (Instagram, Facebook, YouTube), copyright,
+         privacy policy and terms links.
+         =================================================================== -->
+    <footer class="bg-[#091A16] border-t border-[#B89B5E]/20 py-16 px-6 sm:px-12 text-[#F4EEE6]">
+      <div class="container-max flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10">
+        <!-- Logo & About -->
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-7 h-7 rounded border border-[#B89B5E]/40 flex items-center justify-center text-[#B89B5E]">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6a3 3 0 0 1 6 0v6" />
+              </svg>
+            </span>
+            <span class="font-serif text-2xl tracking-[0.16em] uppercase text-[#F4EEE6]">[villa name]</span>
+          </div>
+          <p class="text-xs text-[#F4EEE6]/60 font-sans max-w-sm leading-relaxed">
+            [Type: e.g. 5-bedroom private villa with pool] &bull; [Location: city, area]. [Tagline idea: Where luxury feels like home].
+          </p>
+        </div>
+
+        <!-- Quick Links Mirroring Menu -->
+        <nav class="flex flex-wrap gap-x-6 gap-y-2 text-xs uppercase tracking-[0.16em] text-[#F4EEE6]/70">
+          <a href="#home" class="hover:text-[#B89B5E] transition-colors">Home</a>
+          <a href="#about" class="hover:text-[#B89B5E] transition-colors">About</a>
+          <a href="#gallery" class="hover:text-[#B89B5E] transition-colors">Gallery</a>
+          <a href="#amenities" class="hover:text-[#B89B5E] transition-colors">Amenities</a>
+          <a href="#floorplans" class="hover:text-[#B89B5E] transition-colors">Floor Plans</a>
+          <a href="#location" class="hover:text-[#B89B5E] transition-colors">Location</a>
+          <a href="#experiences" class="hover:text-[#B89B5E] transition-colors">Experiences</a>
+          <a href="#pricing" class="hover:text-[#B89B5E] transition-colors">Pricing</a>
+          <a href="#testimonials" class="hover:text-[#B89B5E] transition-colors">Testimonials</a>
+          <a href="#faq" class="hover:text-[#B89B5E] transition-colors">FAQ</a>
+          <a href="#contact" class="hover:text-[#B89B5E] transition-colors">Contact</a>
+        </nav>
+
+        <!-- Social Icons (Instagram, Facebook, YouTube) -->
+        <div class="flex items-center gap-4 text-[#B89B5E]">
+          <!-- Instagram -->
+          <a href="[Instagram]" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center hover:border-[#B89B5E] hover:bg-[#B89B5E]/10 transition-colors" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="[Facebook]" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center hover:border-[#B89B5E] hover:bg-[#B89B5E]/10 transition-colors" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="[YouTube]" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded border border-[#B89B5E]/30 flex items-center justify-center hover:border-[#B89B5E] hover:bg-[#B89B5E]/10 transition-colors" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Legal / Copyright -->
+      <div class="container-max mt-12 pt-8 border-t border-[#B89B5E]/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-[#F4EEE6]/50 font-mono">
+        <div class="flex gap-4">
+          <a href="#home" class="hover:underline">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="#home" class="hover:underline">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="#home" class="hover:underline">Legal Disclaimers</a>
+        </div>
+        <span>&copy; 2026 [villa name]. All Rights Reserved.</span>
+      </div>
+    </footer>
+
+    <!-- ===================================================================
+         EXTRAS:
+         1. Floating WhatsApp Button on all pages
+         2. Sticky "Book a Visit" mobile bar
+         =================================================================== -->
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/[WhatsApp]?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20[villa%20name]."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-300 hover:scale-110 focus:outline-none"
+      style="background-color: #25D366; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);"
+      aria-label="Enquire via WhatsApp"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+
+    <!-- Sticky "Book a Visit" Mobile Bar -->
+    <div
+      class="fixed bottom-0 left-0 right-0 z-30 xl:hidden p-3 px-6 flex items-center justify-between border-t border-[#B89B5E]/30"
+      style="background-color: rgba(15, 42, 36, 0.96); backdrop-filter: blur(12px);"
+    >
+      <div>
+        <span class="text-[10px] uppercase font-mono tracking-wider text-[#B89B5E] block">[villa name]</span>
+        <span class="font-serif text-lg text-[#F4EEE6] font-light">[price]</span>
+      </div>
+      <a href="#contact" class="btn-gold text-xs py-2.5 px-6">
+        Book a Visit
+      </a>
+    </div>
+
+    <!-- ===================================================================
+         VANILLA JAVASCRIPT CONTROLLERS
+         - Topbar scroll state & active link highlighting
+         - Mobile overlay menu
+         - Animated counters on scroll
+         - Gallery filter tabs & Fullscreen lightbox with arrows and touch swipe
+         - Floor plans tab switcher
+         - Video modal player
+         - Pricing tabs (Sale / Stay)
+         - Testimonials carousel
+         - FAQ accordion
+         - Contact form validation & confirmation
+         - Scroll reveal observer
+         =================================================================== -->
+    <script>
+      /* --- 1. TOPBAR SCROLL STATE & ACTIVE LINK HIGHLIGHTING --- */
+      const topbar = document.getElementById('topbar');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          topbar.classList.add('scrolled');
+        } else {
+          topbar.classList.remove('scrolled');
+        }
+
+        let currentSectionId = '';
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+
+      /* --- 2. MOBILE MENU OVERLAY --- */
+      const menuBtn = document.getElementById('menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      if (menuBtn) menuBtn.addEventListener('click', openMenu);
+      if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+      mobileNavLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+      /* --- 3. ANIMATED NUMBER COUNTERS --- */
+      const counters = document.querySelectorAll('.counter');
+      let countersStarted = false;
+
+      function startCounters() {
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute('data-target');
+          const duration = 1600;
+          const stepTime = 30;
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = target.toLocaleString();
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current).toLocaleString();
+            }
+          }, stepTime);
+        });
+      }
+
+      const aboutSection = document.getElementById('about');
+      if (aboutSection) {
+        const counterObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting && !countersStarted) {
+            countersStarted = true;
+            startCounters();
+          }
+        }, { threshold: 0.25 });
+        counterObserver.observe(aboutSection);
+      }
+
+      /* --- 4. GALLERY TABS & LIGHTBOX --- */
+      const galleryTabs = document.querySelectorAll('.gallery-tab');
+      const galleryCards = document.querySelectorAll('.gallery-card');
+
+      galleryTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          galleryTabs.forEach((t) => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const category = tab.getAttribute('data-category');
+          galleryCards.forEach((card) => {
+            const cardCat = card.getAttribute('data-cat');
+            if (category === 'all' || cardCat === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxCounter = document.getElementById('lightbox-counter');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+
+      let currentLightboxIndex = 0;
+      const galleryItemsData = [];
+
+      galleryCards.forEach((card) => {
+        const img = card.querySelector('img');
+        const caption = card.querySelector('span') ? card.querySelector('span').innerText : '';
+        galleryItemsData.push({
+          src: img.getAttribute('src'),
+          alt: img.getAttribute('alt'),
+          caption: caption
+        });
+
+        card.addEventListener('click', () => {
+          currentLightboxIndex = parseInt(card.getAttribute('data-index'), 10) || 0;
+          openLightbox(currentLightboxIndex);
+        });
+      });
+
+      function openLightbox(index) {
+        if (!galleryItemsData[index]) return;
+        currentLightboxIndex = index;
+        lightboxImg.src = galleryItemsData[index].src;
+        lightboxImg.alt = galleryItemsData[index].alt;
+        lightboxCaption.textContent = galleryItemsData[index].caption;
+        lightboxCounter.textContent = `${index + 1} / ${galleryItemsData.length}`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      function showNextImage() {
+        currentLightboxIndex = (currentLightboxIndex + 1) % galleryItemsData.length;
+        openLightbox(currentLightboxIndex);
+      }
+
+      function showPrevImage() {
+        currentLightboxIndex = (currentLightboxIndex - 1 + galleryItemsData.length) % galleryItemsData.length;
+        openLightbox(currentLightboxIndex);
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
+      if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
+
+      window.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNextImage();
+        if (e.key === 'ArrowLeft') showPrevImage();
+      });
+
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) showNextImage();
+        else if (touchEndX - touchStartX > 50) showPrevImage();
+      }, { passive: true });
+
+      /* --- 5. FLOOR PLANS TABS --- */
+      const floorTabs = document.querySelectorAll('.floor-tab');
+      const floorContents = document.querySelectorAll('.floor-content');
+
+      floorTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          floorTabs.forEach((t) => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const targetFloor = tab.getAttribute('data-floor');
+          floorContents.forEach((c) => {
+            if (c.id === `floor-${targetFloor}`) {
+              c.classList.remove('hidden');
+              c.classList.add('grid');
+            } else {
+              c.classList.add('hidden');
+              c.classList.remove('grid');
+            }
+          });
+        });
+      });
+
+      document.querySelectorAll('.download-brochure-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          alert('Downloading [villa name] architectural specification brochure & floor plans (PDF)...');
+        });
+      });
+
+      /* --- 6. VIDEO MODAL PLAYER --- */
+      const openVideoBtn = document.getElementById('open-video-btn');
+      const videoModal = document.getElementById('video-modal');
+      const closeVideoBtn = document.getElementById('close-video-btn');
+      const modalVideoElement = document.getElementById('modal-video-element');
+
+      if (openVideoBtn && videoModal) {
+        openVideoBtn.addEventListener('click', () => {
+          videoModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          if (modalVideoElement) modalVideoElement.play();
+        });
+      }
+      if (closeVideoBtn && videoModal) {
+        closeVideoBtn.addEventListener('click', () => {
+          videoModal.classList.remove('active');
+          document.body.style.overflow = '';
+          if (modalVideoElement) modalVideoElement.pause();
+        });
+      }
+
+      /* --- 7. PRICING TABS (SALE / STAY) --- */
+      const pricingTabs = document.querySelectorAll('.pricing-tab');
+      const pricingContents = document.querySelectorAll('.pricing-content');
+
+      pricingTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          pricingTabs.forEach((t) => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const targetPricing = tab.getAttribute('data-pricing');
+          pricingContents.forEach((c) => {
+            if (c.id === `pricing-${targetPricing}`) {
+              c.classList.remove('hidden');
+            } else {
+              c.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      /* --- 8. TESTIMONIALS SLIDER --- */
+      const testiSlides = document.querySelectorAll('.testi-slide');
+      const testiDots = document.querySelectorAll('.testi-dot');
+      const testiPrev = document.getElementById('testi-prev');
+      const testiNext = document.getElementById('testi-next');
+      let currentTestiIndex = 0;
+
+      function showTestiSlide(index) {
+        testiSlides.forEach((slide, idx) => {
+          slide.classList.toggle('active', idx === index);
+        });
+        testiDots.forEach((dot, idx) => {
+          dot.style.backgroundColor = idx === index ? 'var(--color-gold)' : 'rgba(15, 42, 36, 0.2)';
+        });
+        currentTestiIndex = index;
+      }
+
+      if (testiNext) {
+        testiNext.addEventListener('click', () => {
+          const nextIndex = (currentTestiIndex + 1) % testiSlides.length;
+          showTestiSlide(nextIndex);
+        });
+      }
+      if (testiPrev) {
+        testiPrev.addEventListener('click', () => {
+          const prevIndex = (currentTestiIndex - 1 + testiSlides.length) % testiSlides.length;
+          showTestiSlide(prevIndex);
+        });
+      }
+      testiDots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          const slideIdx = parseInt(dot.getAttribute('data-slide'), 10) || 0;
+          showTestiSlide(slideIdx);
+        });
+      });
+
+      /* --- 9. FAQ ACCORDION --- */
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach((item) => {
+        const btn = item.querySelector('.faq-btn');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+
+        btn.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+
+          faqItems.forEach((other) => {
+            other.querySelector('.faq-content').classList.add('hidden');
+            other.querySelector('.faq-icon').textContent = '+';
+            other.querySelector('.faq-icon').style.transform = 'none';
+          });
+
+          if (!isOpen) {
+            content.classList.remove('hidden');
+            icon.textContent = '−';
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+
+      /* --- 10. CONTACT FORM VALIDATION & CONFIRMATION --- */
+      const contactForm = document.getElementById('villa-contact-form');
+      const contactSuccess = document.getElementById('contact-success');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const nameInp = document.getElementById('client-name');
+          const phoneInp = document.getElementById('client-phone');
+          const emailInp = document.getElementById('client-email');
+
+          let valid = true;
+
+          if (!nameInp.value.trim()) {
+            document.getElementById('name-err').classList.remove('hidden');
+            valid = false;
+          } else {
+            document.getElementById('name-err').classList.add('hidden');
+          }
+
+          if (!phoneInp.value.trim() || phoneInp.value.trim().length < 8) {
+            document.getElementById('phone-err').classList.remove('hidden');
+            valid = false;
+          } else {
+            document.getElementById('phone-err').classList.add('hidden');
+          }
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInp.value.trim())) {
+            document.getElementById('email-err').classList.remove('hidden');
+            valid = false;
+          } else {
+            document.getElementById('email-err').classList.add('hidden');
+          }
+
+          if (valid) {
+            contactForm.classList.add('hidden');
+            contactSuccess.classList.remove('hidden');
+          }
+        });
+      }
+
+      /* --- 11. SCROLL REVEAL OBSERVER --- */
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.reveal').forEach((el) => {
+        revealObserver.observe(el);
+      });
+    </script>
+  </body>
+</html>
